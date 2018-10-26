@@ -1,6 +1,5 @@
 {
   "build_entry_point": "docs",
-  "need_generate_pdf": true,
   "docsets_to_publish": [
     {
       "docset_name": "e2eppe-azureps",
@@ -8,7 +7,9 @@
       "build_output_subfolder": "e2eppe-azureps",
       "locale": "en-us",
       "monikers": [],
-      "xref_query_tags": ["/dotnet"],
+      "xref_query_tags": [
+        "/dotnet"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -31,8 +32,7 @@
     }
   ],
   "notification_subscribers": [],
-  "sync_notification_subscribers": [],
-  "branches_to_filter": [],
+  "branches_to_filter": ["from-prod-live","from-prod-master"],
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
@@ -44,31 +44,32 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
-    },	
-    {	
-      "path_to_root": "dotnet-xref",	
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref",	
-      "branch": "live",	
-      "branch_mapping": {}	
-    },	
-    {	
-    "path_to_root": "_themes.pdf",	
-    "url": "https://github.com/Microsoft/templates.docs.msft.pdf",	
-    "branch": "master"	
+    },
+    {
+      "path_to_root": "dotnet-xref",
+      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
+      "branch": "live",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
-    "live": [	
-      "Publish",	
-      "Pdf"	
-    ]	
-  },	
-   "Targets": {  	
-    "Pdf": {  	
-    "template_folder": "_themes.pdf"  	
-    }  	
+    "live": [
+      "Publish",
+      "Pdf"
+    ]
   },
   "need_generate_pdf_url_template": true,
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
