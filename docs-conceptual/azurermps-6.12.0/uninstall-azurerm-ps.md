@@ -13,19 +13,7 @@ ms.topic: conceptual
 This article tells you how to uninstall an older version of Azure PowerShell, or completely remove it from
 your system. If you've decided to completely uninstall the Azure PowerShell, give us some feedback
 through the [Send-Feedback](/powershell/module/azurerm.profile/send-feedback) cmdlet.
-If you encountered a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).
-
-## Uninstall MSI
-
-If you installed Azure PowerShell using the MSI package, you must uninstall through the Windows
-system rather than PowerShell.
-
-| Platform | Instructions |
-|----------|--------------|
-| Windows 10 | Start > Settings > Apps |
-| Windows 7 </br>Windows 8 | Start > Control Panel > Programs > Uninstall a program |
-
-Once on this screen you should see "Azure PowerShell" in the program listing, and can uninstall from there.
+If you encounter a bug, we'd appreciate it if you [file a GitHub issue](https://github.com/azure/azure-powershell/issues).
 
 ## Uninstall from PowerShell
 
@@ -55,7 +43,7 @@ function Uninstall-AllModules {
   'Creating list of dependencies...'
   $target = Find-Module $TargetModule -RequiredVersion $version
   $target.Dependencies | ForEach-Object {
-    $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$_.requiredversion}
+    $AllModules += New-Object -TypeName psobject -Property @{name=$_.name; version=$_.minimumVersion}
   }
   $AllModules += New-Object -TypeName psobject -Property @{name=$TargetModule; version=$Version}
 
@@ -96,3 +84,15 @@ script will uninstall all versions of AzureRM __except__ for the latest.
 $versions = (get-installedmodule AzureRM -AllVersions | Select-Object Version)
 $versions[1..($versions.Length-1)]  | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
 ```
+
+## Uninstall MSI
+
+If you installed Azure PowerShell using the MSI package, you must uninstall through the Windows
+system rather than PowerShell.
+
+| Platform | Instructions |
+|----------|--------------|
+| Windows 10 | Start > Settings > Apps |
+| Windows 7 </br>Windows 8 | Start > Control Panel > Programs > Uninstall a program |
+
+Once on this screen you should see "Azure PowerShell" in the program listing, and can uninstall from there.
