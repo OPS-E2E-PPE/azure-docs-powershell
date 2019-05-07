@@ -37,7 +37,9 @@
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "enable_incremental_build": false,
-  "error_log_codes": ["DuplicateOutputFiles"],
+  "error_log_codes": [
+    "DuplicateOutputFiles"
+  ],
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
@@ -90,5 +92,6 @@
   "monikerPath": [
     "mapping/monikerMapping.json"
   ],
-  "dest": "_site"
+  "dest": "_site",
+  "use_postprocessor_wrapper": false
 }
