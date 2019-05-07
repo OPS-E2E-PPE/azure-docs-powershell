@@ -93,5 +93,5 @@
     "mapping/monikerMapping.json"
   ],
   "dest": "_site",
-  "use_postprocessor_wrapper": false
+  "use_postprocessor_wrapper": true
 }
