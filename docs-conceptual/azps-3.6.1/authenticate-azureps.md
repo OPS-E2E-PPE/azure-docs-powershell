@@ -7,6 +7,7 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/04/2019
+ms.custom: [abc, 'Test: Test-Value']
 ---
 # Sign in with Azure PowerShell
 
