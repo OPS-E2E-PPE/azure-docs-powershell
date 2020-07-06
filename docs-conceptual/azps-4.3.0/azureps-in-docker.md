@@ -11,6 +11,8 @@ ms.date: 03/20/2020
 We are publishing Docker images with Azure PowerShell preinstalled. This article shows you how to
 get started using Azure PowerShell in the Docker container.
 
+test incremental
+
 ## Finding available images
 
 The released images require Docker 17.05 or newer. It is also expected that you are able to run
