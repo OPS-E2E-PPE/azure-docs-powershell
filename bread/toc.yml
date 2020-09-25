@@ -23,3 +23,6 @@
   - name: Azure/PowerShell
     tocHref: /powershell/azure/deploymentmanager
     topicHref: /powershell/azure/deploymentmanager/overview
+  - name: Azure/Unknown
+    tocHref: /powershell/azure/unexist
+    topicHref: /oops
